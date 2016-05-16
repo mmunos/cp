@@ -1,0 +1,28 @@
+Interesting DP.
+
+____
+_____
+   ____
+       _____
+        _____
+
+_1111
+_11111
+   ____
+       _____
+        _____
+
+_1111
+_11111
+   __122
+       _____
+        _____
+
+_1111
+_11111
+   __122
+       _22222
+        _____2
+
+Each number is the number of ways a path can be made if the next interval starts on that column.
+Numbers are added after the end of the previous interval.

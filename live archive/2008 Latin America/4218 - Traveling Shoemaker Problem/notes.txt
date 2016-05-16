@@ -1,0 +1,2 @@
+Create a new graph with confederations as vertices and cities as edges and the problem reduces to finding an eulerian path in that graph.
+Iterate for each city c and remove it from the new graph. If new graph is still connected and has an eulerian path that may start on c, answer c.

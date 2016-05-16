@@ -1,0 +1,1 @@
+Modified Dijkstra. Save all shortest paths by modifying the update condition.

@@ -1,0 +1,5 @@
+Problem reduces to finding roots to a polynomial. Root always divides unpaired coefficient.
+
+· 2x^3 + 5x^2 - 3x = 7
+· 0 = 7 (mod x)
+· x | 7

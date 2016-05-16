@@ -1,0 +1,6 @@
+Very frustrating problem. For points to collide two conditions must happen:
+1. Radiuses must be equal or inverse
+2. Radiuses are equal to 0, 
+	or if radiuses are equal, theta1 - theta2 must be 0 (mod 360), 
+	or if radiuses are inverse, theta1 - theta2 must be 180 (mod 360)
+Collect every valid collision point (t > 0) and print the one obtained with the lowest t

@@ -1,0 +1,1 @@
+Very easy but quirky problem. Doing a custom Date class is faster than understanding how to use Java built-in date classes.
