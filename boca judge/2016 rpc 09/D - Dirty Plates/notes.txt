@@ -1,0 +1,1 @@
+Quadratic DP. Have two dp arrays dpclean[][], dpdirty[][]. Each value dpclean[i][j] is the optimum solution for i clean plates and j semi dirty plates (number of dirty plates is defined by i and j) when the table is clean. Values in dpdirty[][] are the same but when the table is dirty.

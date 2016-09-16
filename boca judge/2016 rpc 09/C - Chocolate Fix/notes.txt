@@ -1,0 +1,1 @@
+backtracking and pruning, check partial solutions and stop the branch if the partial solution doesn't fit the hints.
