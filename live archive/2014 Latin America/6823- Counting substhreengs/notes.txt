@@ -1,0 +1,19 @@
+DP. Note that you only care about numeric characters, and moreso, their value modulo 3. When you finish counting for a numeric substring, flush the result and start over.
+
+Have a 3xN array such that dp[m][i] counts the number of substrings that finish at index i and are equal to m mod 3.
+
+Example: input is 128365126bla89736
+
+line	 1  2  8  3  6  5  1  2  6  b  l  a  8  9  7  3  6
+linemod3 1  2  2  0  0  2  1  2  0  _  _  _  2  0  1  0  0
+
+dp[0] = [0, 1, 0, 1, 2, 1, 3, 2, 3, 0, 0, 0, 0, 1, 1, 2, 3]
+dp[1] =	[1, 0, 1, 1, 1, 2, 2, 2, 2, 0, 0, 0, 0, 0, 2, 2, 2]
+dp[2] =	[0, 1, 2, 2, 2, 3, 2, 4, 4, 0, 0, 0, 1, 1, 0, 0, 0]
+
+At we have 5 substrings that finish at index 4: "12836", "2836", "836", "36", "6".
+From these, 2 are equal to 0 mod 3: {36, 6},
+			1 is  equal to 1 mod 3: {2836},
+		and 2 are equal to 2 mod 3: {12836, 2836}.
+
+the result is sum(dp[0]).
