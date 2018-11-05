@@ -1,0 +1,5 @@
+two versions for the same problem
+
+I wrote a pdf with a thorough explanation of the problem (https://www.overleaf.com/read/pqxtjsvrdbzh) but it's in Spanish.
+
+The code that follows the explanation is in C.java and C_alt.java has a shorter and slightly more thought-out solution.
