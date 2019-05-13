@@ -1,0 +1,3 @@
+c++ and c pass but java does not
+
+for pedagogical purposes, instances of 'hash' should be renamed to 'mask'
