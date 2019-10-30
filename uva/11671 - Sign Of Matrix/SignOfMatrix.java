@@ -97,17 +97,16 @@ public class SignOfMatrix {
 	static int[] mark;
 	static boolean dfs(int u) {
 		mark[u] = 1;
-		boolean found = false;
 		for(int v: g[u]) {
 			if(mark[v] == 0) {
 				if(dfs(v)) return true;
 			}
 			else if(mark[v] == 1) {
-				found = true;
+				return true;
 			}
 		}
 		mark[u] = 2;
-		return found;
+		return false;
 	}
 	static ArrayList<Integer>[] g;
 	static class UnionFind {
