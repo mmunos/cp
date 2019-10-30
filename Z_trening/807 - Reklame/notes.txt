@@ -1,0 +1,46 @@
+Insight 1:
+Whenever you set a request to start on a certain day d, for the following request you don't care about what happened on the previous days d' < d.
+
+Insight 2:
+If you want to set a request to start some time after the last occupied day so far, you should set it to start on the very next day after it.
+
+Insight 3:
+If you have a way of setting the first i requests such that the last 7 days look, for example, like this:
+
+3 ads, 1 ad, 2 ad, 0 ads, 0 ads, 1 ad, 2 ads.
+
+And you have a second way of setting the same requests such that the last 7 days look the same, BUT the last day is in a later date, then the former is always better, and you don't have to remember the latter.
+
+More visually, if your first 4 requests are:
+
+A__AAAA
+B__B__B
+CCC____
+D_D____
+
+and you have these two ways of fulfiling them on k = 2
+
+A__AAAACCC____
+B__B__BD_D___D
+
+AB_AAAAB______
+_CCCBD_D___D__
+
+then the ad profile looks like this in each case:
+
+20021122120001
+
+121222120001
+
+Since you have the same size-7 suffix on both cases, the next request will have the exact same choices in both. Therefore, you should keep only the latter since the former is suboptimal and doesn't give any advantage whatsoever.
+
+
+
+Solution:
+
+My solution is a bitmask dp in which each mask represents how many ads have been placed on the last 7 days. This can be done with (k+1)^7 masks, but this makes the masking a bit more cumbersome. My solution was to use 8^7 masks, and compute the valid ones beforehand, ordering them, and mapping them to the indexes on a dp matrix sized n x (k+1)^7.
+
+What's saved in the state (i, mask) is the most optimal (earliest finish date) way of setting the first i requests such that the last 7 days have the profile represented in mask. 
+
+More precisely, if for the 2120001 suffix the most optimal profile is 121222120001, then my dp will store 5. In other words, it stores the size of the minimal prefix possible for 2120001. The actual size of the profile (12 in this case) is calculated at the end.
+
