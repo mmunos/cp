@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "unordered_set": "cpp",
+        "iostream": "cpp",
+        "utility": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "vector": "cpp",
+        "ostream": "cpp",
+        "queue": "cpp",
+        "numeric": "cpp"
+    }
+}
