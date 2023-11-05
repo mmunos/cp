@@ -15,7 +15,7 @@ void print(int x){
 }
 
 int main(){
-    int N = 9;
+    int N = 6, lim = pow(2, N/3);
     int reps = 1000000;
     srand (time(NULL));
     for(int iter = 0; iter < reps; iter++){
@@ -87,8 +87,8 @@ int main(){
             } while(next_permutation(p,  p + N));
             // cout << "---------";
             // cout << endl;
-            if(countsols > 8){
-                cout << "heyhey" << endl;
+            if(countsols > lim){
+                cout << "heyhey " << countsols << endl;
             }
         }
     }
